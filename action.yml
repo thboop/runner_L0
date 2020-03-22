@@ -15,11 +15,5 @@ outputs:
 icon: 'hello.svg' # vector art to display in the GitHub Marketplace
 color: 'green' # optional, decorates the entry in the GitHub Marketplace
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-  - 'bzz'
-  entrypoint: 'main.sh'
-  env:
-    Token: foo
-    Url: bar
+  using: 'node12'
+  post: 'post.js'
