@@ -19,7 +19,7 @@ runs:
   image: 'Dockerfile'
   args:
   - 'bzz'
-  entrypoint: 'main.sh'
+  post-entrypoint: 'main.sh'
   env:
     Token: foo
     Url: bar
