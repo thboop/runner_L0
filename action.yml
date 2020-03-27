@@ -17,9 +17,10 @@ color: 'green' # optional, decorates the entry in the GitHub Marketplace
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  pre-entrypoint: 'init.sh'
   args:
   - 'bzz'
-  post-entrypoint: 'main.sh'
+  post-entrypoint: 'cleanup.sh'
   env:
     Token: foo
     Url: bar
